@@ -1,0 +1,142 @@
+1)
+
+<!-- w.a.p. to perform all arithmetic operation on two integers scanned from user. --!>
+
+
+#include <iostream>
+
+using namespace std;
+
+int main() {
+    int a, b;
+
+    cout << "Enter two numbers:";
+    cin >> a >> b;
+
+    cout << "Addition is: " << a + b << endl;
+    cout << "Subtraction is: " << a - b << endl;
+    cout << "Multiplication is: " << a * b << endl;
+    cout << "Division is: " << a / b << endl;
+    cout << "Modulus is: " << a % b << endl;
+
+    return 0;
+}
+
+
+2)
+   <!-- Write a program to print the following pattern using for loop.
+   1
+  2 3
+ 4 5 6 
+ 78910
+
+--!>
+
+#include <iostream>
+using namespace std;
+int main() {
+    int num = 1;
+
+    for (int i = 1; i <= 4; ++i) {
+        for (int s = 1; s <= 4 - i; ++s) {
+            cout << " ";
+        }
+        for (int j = 1; j <= i; ++j) {
+            cout << num++;
+        }
+        cout <<endl;
+    }
+
+    return 0;
+}
+
+
+3)
+
+ <!-- Write a program to print whether a number entered by user is a prime namber or not. --!>
+
+
+#include<iostream>
+using namespace std;
+
+int main()
+{
+    int i,no,pr=0;
+    cout << "enter no:" << endl;
+    cin >> no;
+    for(i=2; i<no; i++)
+    {
+        if(no%i==0)
+        {
+    pr=1;
+    break;
+}
+}
+if(pr==0)
+    cout << "\ngiven number is prime number" << endl;
+else
+    cout << "\ngiven number is not prime number" << endl;
+return 0;
+}   
+
+
+
+4)
+
+<!--  Write a program to find sum and average of 10 numbers and sort element of ID array in ascending order. --!>
+
+
+
+#include<iostream>
+#include<algorithm>
+
+using namespace std;
+
+int main() {
+    const int size = 10;
+    int numbers[size];
+
+    cout << "Enter 10 numbers: ";
+    for (int i = 0; i < size; ++i) {
+        cin >> numbers[i];
+    }
+
+    int sum = 0;
+    for (int i = 0; i < size; ++i) {
+        sum += numbers[i];
+    }
+
+    int average = sum / size;
+
+    cout << "Sum: " << sum << endl;
+    cout << "Average: " << average << endl;
+
+    sort(numbers, numbers + size);
+
+    cout << "Sorted Numbers (Ascending): ";
+    for (int i = 0; i < size; ++i) {
+        cout << numbers[i] << " ";
+    }
+    cout << endl;
+
+    return 0;
+}
+
+
+5) 
+ <!-- Write a program to print global and local values of a variable using scope resolution operator. --!>
+
+#include <iostream>
+
+using namespace std;
+
+int globalNo = 10; // Global variable declaration
+
+int main() {
+    int localNo = 20; // Local variable declaration
+    
+    cout << "Local variable: " << localNo << endl;
+    cout << "Global variable: " << globalNo << endl;
+    
+    return 0;
+}
